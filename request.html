@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Request | VIDHAN DIGITAL SOLUTIONS</title>
+    <meta name="description" content="Submit a service request to VIDHAN DIGITAL SOLUTIONS. Choose your service, describe the problem, and receive fast support." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="STYLE.CSS" />
+</head>
+<body class="dark">
+    <header>
+        <div class="container">
+            <a href="INDEX.HTML" class="logo">
+                <img src="assets/logo.svg" alt="VIDHAN DIGITAL SOLUTIONS" />
+                <span>VIDHAN DIGITAL SOLUTIONS</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="INDEX.HTML#services">Services</a></li>
+                    <li><a href="INDEX.HTML#portfolio">Portfolio</a></li>
+                    <li><a href="request.html">Request</a></li>
+                    <li><a href="INDEX.HTML#contact">Contact</a></li>
+                    <li><a href="admin-login.html" class="admin-link">Admin</a></li>
+                </ul>
+            </nav>
+            <a href="INDEX.HTML#contact" class="btn desktop-only">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg-particles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <span class="eyebrow">Service Request • Problem Resolution • Fast Follow-up</span>
+                    <h1>Submit your service request to <span class="typing">VIDHAN DIGITAL SOLUTIONS</span></h1>
+                    <p>Tell us your business challenge, select the service you need, and we will save your request directly to our support system.</p>
+                    <div class="hero-buttons">
+                        <a href="#request" class="btn">Submit Request</a>
+                        <a href="tel:+919876543210" class="btn-outline">📞 Call Now</a>
+                        <a href="https://wa.me/919876543210?text=Hello%20VIDHAN%20DIGITAL%20SOLUTIONS" class="btn-outline whatsapp-btn" target="_blank" rel="noopener">💬 WhatsApp Now</a>
+                    </div>
+                    <div class="trust-row">
+                        <span class="trust-pill">Fast responses</span>
+                        <span class="trust-pill">Problem tracking</span>
+                        <span class="trust-pill">Service specialists</span>
+                        <span class="trust-pill">Saved to admin queue</span>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="hero-visual-shell">
+                        <img src="assets/hero-dashboard.svg" alt="Service request illustration" class="hero-illustration" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="request" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Request a Service</span>
+                    <h2>Send your request and we will review it immediately.</h2>
+                    <p>Fill out the form below with your contact details, service requirement, budget, and problem description.</p>
+                    <div class="alert-note">Note: This form sends data to the server. Please start the app with <code>npm start</code> before submitting.</div>
+                </div>
+                <div class="contact-grid">
+                    <form class="contact-form reveal" id="contactForm" name="requestForm" aria-label="Service request form">
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <input type="text" name="company" placeholder="Company Name" />
+                        <select name="service" required>
+                            <option value="">Select service needed</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="Software Development">Software Development</option>
+                            <option value="Mobile App Development">Mobile App Development</option>
+                            <option value="AI & Automation">AI & Automation</option>
+                            <option value="UI/UX & Graphic Design">UI/UX & Graphic Design</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                        </select>
+                        <input type="text" name="budget" placeholder="Estimated budget (optional)" />
+                        <textarea name="message" placeholder="Tell us your problem or project requirement" required></textarea>
+                        <button class="btn btn-wide" type="submit">Submit Request</button>
+                        <div class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                    <div class="contact-info reveal">
+                        <div class="contact-box">
+                            <i class="fa-solid fa-rocket"></i>
+                            <div>
+                                <h4>Fast Tracking</h4>
+                                <p>Requests are routed to our team directly for review.</p>
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fa-solid fa-hands-helping"></i>
+                            <div>
+                                <h4>Expert Support</h4>
+                                <p>Choose the exact service needed so the right specialist reaches out.</p>
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fa-solid fa-check-double"></i>
+                            <div>
+                                <h4>Problem Resolution</h4>
+                                <p>Describe your issue clearly and we will help solve it fast.</p>
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Contact</h4>
+                                <p>hello@znoletechnology.com</p>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+    <script src="SCRIPT.JS"></script>
+</body>
+</html>

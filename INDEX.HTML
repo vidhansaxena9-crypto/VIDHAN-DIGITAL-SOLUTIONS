@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIDHAN DIGITAL SOLUTIONS | Premium Websites, Software & Digital Growth</title>
+    <meta name="description" content="VIDHAN DIGITAL SOLUTIONS offers premium website development, software, mobile app development, AI automation, UI/UX design, digital marketing, and business solutions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="stylesheet" href="STYLE.CSS" />
+</head>
+<body class="dark">
+    <div class="loader">
+        <div class="loader-ring"></div>
+    </div>
+
+    <button id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <a href="https://wa.me/919876543210?text=Hello%20VIDHAN%20DIGITAL%20SOLUTIONS" class="whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <header>
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="assets/logo.svg" alt="VIDHAN DIGITAL SOLUTIONS" />
+                <span>VIDHAN DIGITAL SOLUTIONS</span>
+            </a>
+            <button class="menu-btn" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="request.html">Request</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin-login.html" class="admin-link">Admin</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn desktop-only">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-bg-particles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <span class="eyebrow">Premium digital agency • websites • software • growth</span>
+                    <h1>Build Your Digital Success with <span class="typing">VIDHAN DIGITAL SOLUTIONS</span></h1>
+                    <p>We craft lightning-fast websites, custom software, AI automation, and data-driven marketing systems that make your brand stand out and convert better.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn">🚀 Get Free Consultation</a>
+                        <a href="tel:+919876543210" class="btn-outline">📞 Call Now</a>
+                        <a href="https://wa.me/919876543210?text=Hello%20VIDHAN%20DIGITAL%20SOLUTIONS" class="btn-outline whatsapp-btn" target="_blank" rel="noopener">💬 WhatsApp Now</a>
+                        <button class="btn-outline audit-open" type="button" id="openAuditBtn">🧠 Free Website Audit</button>
+                    </div>
+                    <div class="trust-row">
+                        <span class="trust-pill">★★★★★ Rated by Clients</span>
+                        <span class="trust-pill">50+ Projects</span>
+                        <span class="trust-pill">20+ Happy Clients</span>
+                        <span class="trust-pill">99% Satisfaction</span>
+                        <span class="trust-pill">24/7 Support</span>
+                        <span class="trust-pill">100% Responsive</span>
+                    </div>
+                    <div class="trust-badges reveal">
+                        <span><i class="fa-solid fa-shield-halved"></i> SSL Secure</span>
+                        <span><i class="fa-solid fa-mobile-screen"></i> 100% Responsive</span>
+                        <span><i class="fa-solid fa-magnifying-glass"></i> SEO Ready</span>
+                        <span><i class="fa-solid fa-bolt"></i> Fast Loading</span>
+                        <span><i class="fa-solid fa-globe"></i> Google Friendly</span>
+                        <span><i class="fa-solid fa-headset"></i> 24×7 Support</span>
+                    </div>
+                    <div class="hero-highlight-bars">
+                        <div class="hero-highlight-card">
+                            <strong class="counter" data-target="120">0</strong>
+                            <small>Visitors Today</small>
+                        </div>
+                        <div class="hero-highlight-card">
+                            <strong class="counter" data-target="8">0</strong>
+                            <small>Clients Online</small>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="50">0</h3>
+                            <p>Projects Delivered</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="20">0</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="counter" data-target="99">0</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="hero-slider" id="heroSlider">
+                        <div class="hero-slide active">
+                            <div class="hero-visual-shell">
+                                <div class="orb orb-one"></div>
+                                <div class="orb orb-two"></div>
+                                <img src="assets/hero-dashboard.svg" alt="Dashboard illustration" class="hero-illustration" />
+                                <div class="hero-badge badge-top"><i class="fa-solid fa-bolt"></i> Lightning fast delivery</div>
+                                <div class="hero-badge badge-bottom"><i class="fa-solid fa-shield-check"></i> Secure & scalable</div>
+                            </div>
+                        </div>
+                        <div class="hero-slide">
+                            <div class="hero-visual-shell">
+                                <div class="hero-mini-card">
+                                    <i class="fa-solid fa-robot"></i>
+                                    <h3>AI Automation</h3>
+                                    <p>Convert manual work into smart, streamlined operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-slide">
+                            <div class="hero-visual-shell">
+                                <div class="hero-mini-card">
+                                    <i class="fa-solid fa-mobile-screen"></i>
+                                    <h3>Mobile-first apps</h3>
+                                    <p>Launch polished mobile experiences for modern customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-dots" aria-label="Hero slider controls">
+                        <button class="dot active" data-slide="0" aria-label="Show slide 1"></button>
+                        <button class="dot" data-slide="1" aria-label="Show slide 2"></button>
+                        <button class="dot" data-slide="2" aria-label="Show slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-strip">
+            <div class="container">
+                <div class="brand-strip-inner reveal">
+                    <span class="brand-label">Trusted by ambitious businesses</span>
+                    <div class="brand-list">
+                        <span>Restaurants</span>
+                        <span>Hospitals</span>
+                        <span>Schools</span>
+                        <span>Hotels</span>
+                        <span>Startups</span>
+                        <span>Real Estate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">About Us</span>
+                    <h2>We turn bold ideas into premium digital experiences.</h2>
+                    <p>VIDHAN DIGITAL SOLUTIONS is a full-service technology partner that helps startups, SMEs, and established businesses build a powerful digital presence with reliable systems, modern design, and measurable growth.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card reveal">
+                        <h3>Why choose VIDHAN DIGITAL SOLUTIONS?</h3>
+                        <p>We combine strategy, design, and development to deliver solutions that are elegant, scalable, and user-focused.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Professional website design</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Custom business software</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mobile app development</li>
+                            <li><i class="fa-solid fa-circle-check"></i> AI automation and growth systems</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Ongoing maintenance and support</li>
+                        </ul>
+                    </div>
+                    <div class="about-card reveal">
+                        <div class="badge">End-to-end support</div>
+                        <h3>We build digital products that drive real business value.</h3>
+                        <p>Whether you need a modern website, an e-commerce store, a hospital or school portal, or AI-based automation, we make your business future-ready.</p>
+                        <div class="check-grid">
+                            <div><i class="fa-solid fa-globe"></i><span>Web</span></div>
+                            <div><i class="fa-solid fa-laptop-code"></i><span>Software</span></div>
+                            <div><i class="fa-solid fa-mobile-screen"></i><span>Apps</span></div>
+                            <div><i class="fa-solid fa-robot"></i><span>AI</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Our Services</span>
+                    <h2>Everything your business needs to go digital.</h2>
+                    <p>We offer a broad range of services across web, software, app, design, marketing, automation, cloud, and support.</p>
+                </div>
+                <div class="service-categories">
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3>Website Development</h3>
+                        <ul>
+                            <li>Business Website</li>
+                            <li>Restaurant Website</li>
+                            <li>Hospital Website</li>
+                            <li>School Website</li>
+                            <li>E-commerce Website</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Software Development</h3>
+                        <ul>
+                            <li>School Management System</li>
+                            <li>Hospital Management System</li>
+                            <li>Billing & Inventory Software</li>
+                            <li>CRM / ERP / HRMS</li>
+                            <li>Payroll & Attendance Systems</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <h3>Mobile App Development</h3>
+                        <ul>
+                            <li>Android App Development</li>
+                            <li>iOS App Development</li>
+                            <li>Hybrid / Flutter Apps</li>
+                            <li>Business Apps</li>
+                            <li>E-commerce App Development</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+                        <h3>UI/UX & Graphic Design</h3>
+                        <ul>
+                            <li>Logo Design</li>
+                            <li>Brand Identity</li>
+                            <li>Packaging & UI/UX Design</li>
+                            <li>Website Mockups in Figma</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Digital Marketing</h3>
+                        <ul>
+                            <li>SEO & Local SEO</li>
+                            <li>Google Ads / Meta Ads</li>
+                            <li>YouTube & Social Media Marketing</li>
+                            <li>Google Business Profile</li>
+                        </ul>
+                    </article>
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>AI & Automation</h3>
+                        <ul>
+                            <li>AI Chatbots</li>
+                            <li>Workflow Automation</li>
+                            <li>Lead Management Bots</li>
+                            <li>Voice Assistant & Document Tools</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="request">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Service Request</span>
+                    <h2>Submit your service request and problem details instantly.</h2>
+                    <p>Choose the service you need, share your issue, and we will save the request in our system for fast follow-up.</p>
+                </div>
+                <div class="request-grid">
+                    <div class="request-card reveal">
+                        <h3>Quick problem resolution</h3>
+                        <p>Share your current issue and our team will review it immediately. We prioritize urgent requests and support clients quickly.</p>
+                        <ul class="request-features">
+                            <li><i class="fa-solid fa-bolt"></i>Rapid response for site issues</li>
+                            <li><i class="fa-solid fa-headset"></i>24/7 support readiness</li>
+                            <li><i class="fa-solid fa-check-circle"></i>Request saved directly to our admin system</li>
+                        </ul>
+                    </div>
+                    <div class="request-card reveal">
+                        <h3>Service selection</h3>
+                        <p>Let us know the exact service you need so we can assign the right specialist.</p>
+                        <div class="service-pill-list">
+                            <span>Website</span>
+                            <span>Software</span>
+                            <span>Apps</span>
+                            <span>AI</span>
+                            <span>Design</span>
+                            <span>Marketing</span>
+                        </div>
+                    </div>
+                    <div class="request-card reveal">
+                        <h3>Easy submission</h3>
+                        <p>The form below captures your contact information, business details, service type, budget, and your exact request.</p>
+                        <a href="#contact" class="btn">Go to Request Form</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="awards" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Awards & Recognition</span>
+                    <h2>Trusted for premium execution, performance, and support.</h2>
+                </div>
+                <div class="award-grid">
+                    <article class="award-card reveal">
+                        <h3>Best Development Agency</h3>
+                        <p>Recognized for premium website and software delivery.</p>
+                    </article>
+                    <article class="award-card reveal">
+                        <h3>Fast Delivery</h3>
+                        <p>Rapid build cycles from planning to launch.</p>
+                    </article>
+                    <article class="award-card reveal">
+                        <h3>Premium Support</h3>
+                        <p>Dedicated guidance before, during, and after launch.</p>
+                    </article>
+                    <article class="award-card reveal">
+                        <h3>Customer Satisfaction</h3>
+                        <p>Consistent results backed by transparent collaboration.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="impact-section">
+            <div class="container">
+                <div class="impact-card reveal">
+                    <div>
+                        <span class="section-kicker">Why choose VIDHAN</span>
+                        <h2>We combine strategy, design, and execution in one premium growth engine.</h2>
+                    </div>
+                    <div class="impact-points">
+                        <div><i class="fa-solid fa-chart-line"></i><span>Conversion-first design</span></div>
+                        <div><i class="fa-solid fa-layer-group"></i><span>Scalable digital systems</span></div>
+                        <div><i class="fa-solid fa-sparkles"></i><span>AI-powered workflows</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Development Process</span>
+                    <h2>A simple and transparent way to launch fast.</h2>
+                </div>
+                <div class="process-grid">
+                    <article class="process-card reveal">
+                        <div class="step-number">01</div>
+                        <h3>Discover</h3>
+                        <p>We map your goals, audience, and business objectives before planning the build.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <div class="step-number">02</div>
+                        <h3>Design</h3>
+                        <p>We shape the experience around clarity, trust, and conversion-friendly layouts.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <div class="step-number">03</div>
+                        <h3>Develop</h3>
+                        <p>We implement the website, software, or app with performance and SEO in mind.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <div class="step-number">04</div>
+                        <h3>Launch & Grow</h3>
+                        <p>We support the launch and optimize the digital system to keep your business moving.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="industries">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Industries We Serve</span>
+                    <h2>Trusted by businesses across many sectors.</h2>
+                </div>
+                <div class="industry-grid reveal">
+                    <div class="industry-chip">🏥 Hospitals</div>
+                    <div class="industry-chip">💊 Medical Stores</div>
+                    <div class="industry-chip">🍽 Restaurants & Cafes</div>
+                    <div class="industry-chip">🏫 Schools & Colleges</div>
+                    <div class="industry-chip">🏨 Hotels</div>
+                    <div class="industry-chip">🏘 Real Estate</div>
+                    <div class="industry-chip">🛍 E-commerce</div>
+                    <div class="industry-chip">💼 Startups</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Technologies</span>
+                    <h2>Modern stacks for premium performance and scale.</h2>
+                </div>
+                <div class="tech-grid reveal">
+                    <span>React</span>
+                    <span>Next.js</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                    <span>Firebase</span>
+                    <span>PHP</span>
+                    <span>WordPress</span>
+                    <span>Laravel</span>
+                    <span>Python</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Simple pricing</span>
+                    <h2>Flexible plans for businesses at every stage.</h2>
+                </div>
+                <div class="pricing-grid">
+                    <article class="pricing-card reveal">
+                        <h3>Starter</h3>
+                        <div class="price">₹15k<span>/project</span></div>
+                        <ul>
+                            <li>Landing page</li>
+                            <li>Basic SEO setup</li>
+                            <li>Contact form</li>
+                        </ul>
+                        <a href="#contact" class="btn-outline">Start Now</a>
+                    </article>
+                    <article class="pricing-card featured reveal">
+                        <div class="popular-tag">Most Popular</div>
+                        <h3>Business</h3>
+                        <div class="price">₹45k<span>/project</span></div>
+                        <ul>
+                            <li>Business website</li>
+                            <li>CRM / automation</li>
+                            <li>Premium UI/UX</li>
+                        </ul>
+                        <a href="#contact" class="btn">Book Package</a>
+                    </article>
+                    <article class="pricing-card reveal">
+                        <h3>Premium</h3>
+                        <div class="price">Custom</div>
+                        <ul>
+                            <li>Custom software</li>
+                            <li>Mobile app</li>
+                            <li>Full digital stack</li>
+                        </ul>
+                        <a href="#contact" class="btn-outline">Request Quote</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculator" class="section-alt">
+            <div class="container">
+                <div class="calculator-card reveal">
+                    <div class="section-title">
+                        <span class="section-kicker">Cost Calculator</span>
+                        <h2>Estimate your perfect website in seconds.</h2>
+                    </div>
+                    <div class="calculator-body">
+                        <label for="websiteType">Website Type</label>
+                        <select id="websiteType">
+                            <option value="restaurant">Restaurant</option>
+                            <option value="school">School</option>
+                            <option value="hospital">Hospital</option>
+                            <option value="business">Business</option>
+                        </select>
+                        <div class="calculator-result">
+                            <span>Estimated Cost</span>
+                            <strong id="estimateAmount">₹7999</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="before-after-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Before & After</span>
+                    <h2>Old websites become high-speed, conversion-ready platforms.</h2>
+                </div>
+                <div class="before-after-grid">
+                    <article class="before-after-card reveal">
+                        <div class="before-after-head">Old Website</div>
+                        <div class="before-after-stage old-stage">
+                            <span>Slow load</span>
+                            <strong>6 sec</strong>
+                        </div>
+                    </article>
+                    <article class="before-after-card reveal">
+                        <div class="before-after-head">New Website</div>
+                        <div class="before-after-stage new-stage">
+                            <span>Lightning load</span>
+                            <strong>1.2 sec</strong>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-alt testimonials-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Client Success</span>
+                    <h2>What our clients say about working with us.</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card reveal">
+                        <p>“The site looks fantastic and increased our inquiries immediately. The team understood our business in one meeting.”</p>
+                        <div class="testimonial-author">
+                            <strong>Ravi Sharma</strong>
+                            <span>Dental Care Clinic</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card reveal">
+                        <p>“Their software and design helped us replace messy spreadsheets with a polished workflow. Truly professional.”</p>
+                        <div class="testimonial-author">
+                            <strong>Neha Gupta</strong>
+                            <span>Fitness Brand</span>
+                        </div>
+                    </article>
+                    <article class="testimonial-card reveal">
+                        <p>“From website to automation, everything feels premium and ready for growth. Highly recommended.”</p>
+                        <div class="testimonial-author">
+                            <strong>Arjun Mehta</strong>
+                            <span>Retail Business</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="team">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Meet Our Team</span>
+                    <h2>Experienced people behind every launch.</h2>
+                </div>
+                <div class="team-grid">
+                    <article class="team-card reveal">
+                        <img src="photo.JPG" alt="Vidhan Saxena portrait" class="center" >
+                        <h3>Vidhan Saxena</h3>
+                        <p>Founder & CEO</p>
+                        <span>VIDHAN DIGITAL SOLUTIONS</span>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Certifications</span>
+                    <h2>Skills backed by practical delivery and growth-focused execution.</h2>
+                </div>
+                <div class="cert-grid reveal">
+                    <div class="cert-badge">HTML5</div>
+                    <div class="cert-badge">CSS3</div>
+                    <div class="cert-badge">JavaScript</div>
+                    <div class="cert-badge">React</div>
+                    <div class="cert-badge">Node.js</div>
+                    <div class="cert-badge">Google</div>
+                    <div class="cert-badge">Microsoft</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">FAQ</span>
+                    <h2>Answers to the questions that matter before you begin.</h2>
+                </div>
+                <div class="faq-list">
+                    <article class="faq-item reveal active">
+                        <button class="faq-question" type="button">How much does a website cost?<span>+</span></button>
+                        <div class="faq-answer"><p>Pricing depends on the scope of the project, but we offer starter, business, and premium packages tailored to your goals.</p></div>
+                    </article>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button">How long does development take?<span>+</span></button>
+                        <div class="faq-answer"><p>Most landing pages and small business websites are delivered within 5–10 working days, while larger projects may take longer.</p></div>
+                    </article>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button">Do you provide hosting?<span>+</span></button>
+                        <div class="faq-answer"><p>Yes. We can support hosting, domain setup, SSL, and ongoing maintenance after launch.</p></div>
+                    </article>
+                    <article class="faq-item reveal">
+                        <button class="faq-question" type="button">Do you redesign existing websites?<span>+</span></button>
+                        <div class="faq-answer"><p>Absolutely. We can redesign existing websites to improve speed, user experience, conversion rate, and overall look.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Blog</span>
+                    <h2>Insights for better growth, visibility, and smarter marketing.</h2>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card reveal">
+                        <h3>Best Website Design Practices</h3>
+                        <p>Learn how premium design choices influence trust, clarity, and lead conversion.</p>
+                        <a href="#contact" class="btn-outline">Read More</a>
+                    </article>
+                    <article class="blog-card reveal">
+                        <h3>SEO Tips for Local Businesses</h3>
+                        <p>Discover high-impact tactics that help restaurants, clinics, and shops appear locally online.</p>
+                        <a href="#contact" class="btn-outline">Read More</a>
+                    </article>
+                    <article class="blog-card reveal">
+                        <h3>How Google Business Profile Helps</h3>
+                        <p>Use your profile strategically to boost local trust and capture more ready-to-buy customers.</p>
+                        <a href="#contact" class="btn-outline">Read More</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="section-kicker">Contact Us</span>
+                    <h2>Let’s build something great together.</h2>
+                    <p>Share your goals and we will help you turn them into a high-performing digital solution.</p>
+                </div>
+                <div class="contact-grid">
+                    <form class="contact-form reveal" id="contactForm">
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <input type="text" name="company" placeholder="Company Name" />
+                        <select name="service" required>
+                            <option value="">Select service needed</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="Software Development">Software Development</option>
+                            <option value="Mobile App Development">Mobile App Development</option>
+                            <option value="AI & Automation">AI & Automation</option>
+                            <option value="UI/UX & Graphic Design">UI/UX & Graphic Design</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                        </select>
+                        <input type="text" name="budget" placeholder="Estimated budget (optional)" />
+                        <textarea name="message" placeholder="Tell us your problem or project requirement"></textarea>
+                        <button class="btn btn-wide" type="submit">Request a Free Consultation</button>
+                        <div class="form-status" role="status" aria-live="polite"></div>
+                    </form>
+                    <div class="contact-info reveal">
+                        <div class="contact-box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>vidhansaxena480@gmail.com.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 7017164192</p>
+                            </div>
+                        </div>
+                        <div class="contact-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Serving clients across India and worldwide.</p>
+                            </div>
+                        </div>
+                        <div class="map-card">
+                            <iframe src="https://www.google.com/maps?q=Delhi,India&z=12&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Office map"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+
+    <div class="ai-chat-widget" id="aiChatWidget">
+        <button class="chat-toggle" id="chatToggle" type="button" aria-label="Open chat assistant">
+            <i class="fa-solid fa-comments"></i>
+        </button>
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <div>
+                    <strong>VIDHAN AI Assistant</strong>
+                    <p>Hello 👋 Need a website?</p>
+                </div>
+                <button class="chat-close" id="chatClose" type="button" aria-label="Close chat">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-bubble">Chat with us for a quick proposal.</div>
+            </div>
+            <form class="chat-form" id="chatForm">
+                <input type="text" placeholder="Type your query" required />
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="audit-modal" id="auditModal" aria-hidden="true">
+        <div class="audit-modal-content">
+            <button class="audit-close" id="auditClose" type="button" aria-label="Close audit popup"><i class="fa-solid fa-xmark"></i></button>
+            <h3>Get FREE Website Audit</h3>
+            <form class="audit-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="tel" placeholder="Phone Number" required />
+                <input type="url" placeholder="Your Website" />
+                <button class="btn btn-wide" type="submit">Get Report</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>VIDHAN DIGITAL SOLUTIONS</h3>
+                    <p>We build premium websites, software, apps, AI tools, and digital marketing systems that help your business grow sustainably.</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <a href="#services">Website Development</a>
+                    <a href="#services">Software Development</a>
+                    <a href="#services">AI & Automation</a>
+                    <a href="#services">Digital Marketing</a>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div>
+                    <h3>Follow & Connect</h3>
+                    <a href="https://wa.me/917017164192" target="_blank" rel="noopener">WhatsApp</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="http://localhost:3000/admin" style="margin-top:0.75rem; font-weight:600; color:#fff;">Admin Panel</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 VIDHAN DIGITAL SOLUTIONS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="SCRIPT.JS"></script>
+</body>
+</html>

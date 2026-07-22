@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Vidhan Digital Solution</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07111f; --panel:#111c2f; --text:#e2e8f0; --muted:#94a3b8; --accent:#2563eb; --danger:#ef4444; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Poppins, Arial, sans-serif; background:linear-gradient(135deg,#07111f,#0f172a); color:var(--text); min-height:100vh; padding:24px; }
+    .container { max-width:1200px; margin:auto; background:rgba(17,28,47,0.95); border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:24px; box-shadow:0 20px 45px rgba(0,0,0,0.25); }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
+    .topbar h1 { margin:0; font-size:1.4rem; }
+    .topbar button { border:none; border-radius:999px; padding:10px 16px; background:var(--accent); color:white; cursor:pointer; font-weight:600; }
+    .topbar .btn-logout { background:var(--danger); }
+    .status { padding:10px 12px; border-radius:12px; background:rgba(37,99,235,0.12); color:#bfdbfe; margin-bottom:16px; }
+    table { width:100%; border-collapse:collapse; overflow:hidden; border-radius:16px; } 
+    th, td { padding:12px 10px; border-bottom:1px solid rgba(255,255,255,0.08); text-align:left; vertical-align:top; }
+    th { background:rgba(255,255,255,0.05); color:#cbd5e1; }
+    .pill { display:inline-block; padding:5px 10px; border-radius:999px; background:rgba(37,99,235,0.16); color:#bfdbfe; font-size:0.8rem; }
+    .btn-delete { border:none; border-radius:999px; padding:8px 12px; background:var(--danger); color:white; cursor:pointer; }
+    .muted { color:var(--muted); }
+    .empty { padding:20px; text-align:center; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <h1>Admin Panel</h1>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button id="refreshBtn" type="button">Refresh</button>
+        <button id="logoutBtn" class="btn-logout" type="button">Logout</button>
+      </div>
+    </div>
+    <div class="status">Note: Start the server with <code>npm start</code> before using this page so inquiry data loads correctly.</div>
+    <div id="status" class="status">Loading inquiries…</div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Business</th>
+          <th>Service</th>
+          <th>Budget</th>
+          <th>Message</th>
+          <th>Received</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const rows = document.getElementById('rows');
+    const status = document.getElementById('status');
+    const getApiBase = () => {
+      if (window.location.protocol === 'file:') {
+        return 'http://localhost:3000';
+      }
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return 'http://localhost:3000';
+      }
+      return window.location.origin;
+    };
+
+    async function loadMessages() {
+      status.textContent = 'Loading inquiries…';
+      try {
+        const response = await fetch(`${getApiBase()}/api/messages`);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Unable to load inquiries.');
+        if (!data.length) {
+          rows.innerHTML = '<tr><td colspan="9" class="empty">No inquiries yet.</td></tr>';
+          status.textContent = 'No inquiries received.';
+          return;
+        }
+        rows.innerHTML = data.map(item => `
+          <tr>
+            <td>#${item.id}</td>
+            <td>${item.name}</td>
+            <td><span class="pill">${item.email}</span></td>
+            <td>${item.business || '—'}</td>
+            <td>${item.service || '—'}</td>
+            <td>${item.budget || '—'}</td>
+            <td>${item.message}</td>
+            <td class="muted">${new Date(item.created_at).toLocaleString()}</td>
+            <td><button class="btn-delete" data-id="${item.id}" type="button">Delete</button></td>
+          </tr>
+        `).join('');
+        status.textContent = `${data.length} inquiry${data.length === 1 ? '' : 'ies'} loaded.`;
+      } catch (error) {
+        rows.innerHTML = '<tr><td colspan="7" class="empty">Could not load inquiries.</td></tr>';
+        status.textContent = error.message || 'Unable to load inquiries.';
+      }
+    }
+
+    rows.addEventListener('click', async (event) => {
+      const button = event.target.closest('button[data-id]');
+      if (!button) return;
+      const id = button.getAttribute('data-id');
+      const confirmed = window.confirm('Delete this inquiry?');
+      if (!confirmed) return;
+      try {
+        const response = await fetch(`${getApiBase()}/api/messages/${id}`, { method: 'DELETE' });
+        const data = await response.json();
+        if (!response.ok || !data.success) throw new Error(data.message || 'Delete failed');
+        status.textContent = 'Inquiry deleted.';
+        loadMessages();
+      } catch (error) {
+        status.textContent = error.message || 'Delete failed';
+      }
+    });
+
+    document.getElementById('refreshBtn').addEventListener('click', loadMessages);
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      try {
+        const response = await fetch(`${getApiBase()}/api/admin/logout`, { method: 'POST' });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'Logout failed');
+        window.location.href = '/admin-login.html';
+      } catch (error) {
+        status.textContent = error.message || 'Logout failed';
+      }
+    });
+    loadMessages();
+  </script>
+</body>
+</html>

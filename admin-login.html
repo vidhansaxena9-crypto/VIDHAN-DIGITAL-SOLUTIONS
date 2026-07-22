@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login | Vidhan Digital Solutions</title>
+  <style>
+    :root { color-scheme: dark; --bg:#07111f; --panel:#111c2f; --text:#e2e8f0; --muted:#94a3b8; --accent:#2563eb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Poppins, Arial, sans-serif; background:linear-gradient(135deg,#07111f,#0f172a); color:var(--text); min-height:100vh; display:grid; place-items:center; padding:24px; }
+    .card { width:min(100%, 420px); background:rgba(17,28,47,0.95); border:1px solid rgba(255,255,255,0.08); border-radius:24px; padding:28px; box-shadow:0 20px 45px rgba(0,0,0,0.25); }
+    h1 { margin:0 0 8px; font-size:1.4rem; }
+    p { margin:0 0 18px; color:var(--muted); line-height:1.6; }
+    label { display:block; margin-bottom:6px; font-weight:600; }
+    input { width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:#0f172a; color:white; margin-bottom:14px; }
+    button { width:100%; border:none; border-radius:999px; padding:12px 14px; background:var(--accent); color:white; cursor:pointer; font-weight:600; }
+    .message { margin-top:14px; padding:10px 12px; border-radius:12px; min-height:44px; color:#bfdbfe; background:rgba(37,99,235,0.12); }
+    .hint { margin-top:16px; font-size:0.9rem; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Owner Admin Login</h1>
+    <p>Use the credentials below to access the admin panel and view incoming requests.</p>
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required />
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required />
+      <button type="submit">Login</button>
+    </form>
+    <div id="message" class="message">Enter your owner credentials to continue.</div>
+    <div class="hint">Default credentials: username <strong>vidhanadmin</strong> and password <strong>Vidhan@2026</strong></div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+      message.textContent = 'Signing in…';
+
+      try {
+        const response = await fetch('/api/admin/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+
+        const text = await response.text();
+        let data = {};
+        if (text) {
+          try {
+            data = JSON.parse(text);
+          } catch (parseError) {
+            data = { message: 'The server returned an invalid response.' };
+          }
+        }
+
+        if (!response.ok) throw new Error(data.message || 'Login failed');
+        window.location.href = '/admin';
+      } catch (error) {
+        message.textContent = error.message || 'Login failed';
+      }
+    });
+  </script>
+</body>
+</html>
