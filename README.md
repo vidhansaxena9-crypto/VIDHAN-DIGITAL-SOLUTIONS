@@ -1,4 +1,4 @@
-# 🤖 AI Future Tech
+# 🤖 VIDHAN DIGITAL SOLUTIONS
 
 A modern AI-powered futuristic landing page built using HTML, CSS, and JavaScript featuring smooth animations, particle background, typing effect, responsive design, and interactive service cards.
 
